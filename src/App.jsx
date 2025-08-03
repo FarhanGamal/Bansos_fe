@@ -1,33 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './index.css'
+import PublicLayout from './layouts/public'
+import Home from './pages/public'
+import Login from './pages/auth/login'
+import Types from './pages/public/Jenis'
+import TypeCreate from './pages/public/Jenis/create'
+import TypeEdit from './pages/public/Jenis/edit'
+import Criterias from './pages/public/Kriteria'
+import CriteriaCreate from './pages/public/Kriteria/create'
+import CriteriaEdit from './pages/public/Kriteria/edit'
+import Analisis from './pages/public/Analisis'
+import Reports from './pages/public/Report'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes>
+          {/* Auth Routes */}
+          <Route path="login" element={<Login />} />
+
+          {/* Public Routes */}
+          <Route element={<PublicLayout />} >
+            <Route index element={<Home />} />
+            {/* <Route path="type" element={<Types/>} /> */}
+            
+            <Route path="types">
+              <Route index element={<Types />} />
+              <Route path="create" element={<TypeCreate />} />
+              <Route path="edit/:id" element={<TypeEdit />} />
+            </Route>
+
+            <Route path="criterias">
+              <Route index element={<Criterias />} />
+              <Route path="create" element={<CriteriaCreate />} />
+              <Route path="edit/:id" element={<CriteriaEdit />} />
+            </Route>
+
+            <Route path="analisis">
+              <Route index element={<Analisis />} />
+            </Route>
+
+            <Route path="report">
+              <Route index element={<Reports />} />
+            </Route>
+
+          </Route>
+
+          
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
