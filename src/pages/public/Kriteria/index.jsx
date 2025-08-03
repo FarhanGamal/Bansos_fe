@@ -66,7 +66,7 @@ export default function Criterias() {
                     Kriteria
                   </th>
                   <th className="px-4 py-4 text-left font-medium text-black dark:text-white">
-                    Actions
+                    Aksi
                   </th>
                 </tr>
               </thead>

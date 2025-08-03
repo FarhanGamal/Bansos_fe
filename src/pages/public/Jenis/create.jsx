@@ -52,7 +52,7 @@ export default function TypeCreate() {
             {/* Name Input */}
             <div>
               <label className="mb-2 block text-sm font-medium text-black dark:text-white">
-                Name
+                Nama
               </label>
               {errors.name && <Error res={errors.name[0]} />}
               <input
@@ -68,7 +68,7 @@ export default function TypeCreate() {
             {/* Description Input */}
             <div>
               <label className="mb-2 block text-sm font-medium text-black dark:text-white">
-                Description
+                Deskripsi
               </label>
               {errors.description && <Error res={errors.description[0]} />}
               <textarea

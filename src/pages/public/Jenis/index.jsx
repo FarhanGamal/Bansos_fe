@@ -46,13 +46,13 @@ export default function Types() {
               <thead className="bg-gray-100 dark:bg-meta-4">
                 <tr>
                   <th className="min-w-[150px] px-4 py-4 text-left font-medium text-black dark:text-white">
-                    Name
+                    Nama
                   </th>
                   <th className="min-w-[220px] px-4 py-4 text-left font-medium text-black dark:text-white">
-                    Description
+                    Deskripsi
                   </th>
                   <th className="px-4 py-4 text-left font-medium text-black dark:text-white">
-                    Actions
+                    Aksi
                   </th>
                 </tr>
               </thead>

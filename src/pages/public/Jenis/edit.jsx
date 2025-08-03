@@ -64,7 +64,7 @@ export default function TypeEdit() {
             {/* Input Name */}
             <div>
               <label className="mb-2 block text-base font-medium text-black dark:text-white">
-                Name
+                Nama
               </label>
               {errors.name && (
                 <div
@@ -86,7 +86,7 @@ export default function TypeEdit() {
             {/* Input Description */}
             <div>
               <label className="mb-2 block text-base font-medium text-black dark:text-white">
-                Description
+                Deskripsi
               </label>
               {errors.description && (
                 <div

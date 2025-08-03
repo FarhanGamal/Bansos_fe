@@ -72,7 +72,7 @@ export default function CriteriaEdit() {
             {/* Input Name */}
             <div>
               <label className="mb-2 block text-base font-medium text-black dark:text-white">
-                Name
+                Nama
               </label>
               {errors.name && (
                 <div
@@ -96,7 +96,7 @@ export default function CriteriaEdit() {
               <label
                 className="mb-3 block text-sm font-medium text-black dark:text-white"
               >
-                Type
+                Jenis
               </label>
               {errors.type_id && (
                 <div className="p-2 my-2 text-red-800 rounded-lg bg-red-50" role="alert">
